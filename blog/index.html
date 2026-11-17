@@ -1,1 +1,10 @@
-Hello, This Blog Post
+```html
+<h2>My Blog Posts</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date: "%b %d, %Y" }}</span> — 
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
